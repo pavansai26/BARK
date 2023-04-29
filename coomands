@@ -1,0 +1,7 @@
+#Move back to the root of the bark-api directory, and build the Docker image:
+docker build -t bark-api .
+#This will build a new Docker image based on the Dockerfile we created earlier, and tag it with the name bark-api.
+#Once the image is built, you can run it in a Docker container:
+docker run -p 8000:80 bark-api
+#This will start a new container based on the bark-api image, and map port 8000 on your local machine to port 80 in the container. 
+#You can then access the API by visiting http://localhost:8000/bark/{prompt} in your web browser or sending GET requests to the endpoint using curl or any HTTP client of your choice.
